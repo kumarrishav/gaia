@@ -27,3 +27,64 @@ form[role="dialog"][data-type="object"].visible {
 	visibility: visible;
 	transform: translateY(0);
 }
+
+@media (min-width: 768px) {
+  form[role="dialog"][data-type="action"] > menu,
+  form[role="dialog"][data-type="object"] > menu {
+    position: absolute;
+    top: calc(50% - 24rem);
+    left: calc(50% - 40rem);
+    width: 68rem;
+    height: 38rem;
+    padding: 0 6rem;
+    font-size: 2.2rem;
+    background-color: #333333;
+    box-shadow: 0 0 1rem #222222;
+    border: 0.1rem solid #282828;
+    z-index:1;
+  }
+
+  form[role="dialog"][data-type="action"] > menu > button,
+  form[role="dialog"][data-type="object"] > menu > button {
+    -moz-box-sizing: border-box;
+    border: 0.1rem #a8a8a8;
+    background: none no-repeat 1rem 50%;
+    background-color: #898989;
+    height: 4.7rem;
+    font-size: 2.3rem;
+    line-height: 3rem;
+    font-weight: 400;
+    margin-top: 2.4rem;
+    padding: 1rem 6rem;       
+  }
+
+  form[role="dialog"][data-type="action"] > menu > button:last-child,
+  form[role="dialog"][data-type="object"] > menu > button:last-child {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-shadow: 0.1rem 0.1rem 0 rgba(255,255,255,0.3);
+    color: #333;
+    font-weight: 500;
+    background: #fafafa url(buttons/images/ui/default.png) repeat-x left bottom / auto 100%;
+    border: solid 0.1rem #a6a6a6;
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 1.1rem;
+    width:25%;
+    margin-left:30rem;
+  }
+
+  form[role="dialog"][data-type="action"] > menu > button:last-child:before,
+  form[role="dialog"][data-type="object"] > menu > button:last-child:before {
+    content: '';
+    position: fixed;
+    width: 80.1rem;
+    background: url(action_menu/images/ui/pattern.png) repeat scroll left top #2D2D2D;
+    height: 7rem;
+    left: calc(50% - 39.9rem);
+    bottom: 24.4rem;
+    z-index: -1;
+    border-top: 0.1rem solid rgba(255, 255, 255, 0.1);
+  }
+}
